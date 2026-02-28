@@ -102,7 +102,7 @@ export default function MusicDetails({ token }) {
       ) : error ? (
         <div className="alert alert-danger">{error}</div>
       ) : !track ? (
-        <div className="alert alert-warning">Track nathi madyu.</div>
+        <div className="alert alert-warning">Track.</div>
       ) : (
         <div className="details-card shadow-sm">
           <div className="details-hero">
