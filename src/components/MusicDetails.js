@@ -69,11 +69,11 @@ export default function MusicDetails({ token }) {
         const res = await fetch(`https://api.spotify.com/v1/tracks/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
-        if (!res.ok) throw new Error("Track details fetch nathi thayu.");
+        if (!res.ok) throw new Error("Track not details fetch ");
         const data = await res.json();
         setTrack(data);
       } catch (e) {
-        setError(e?.message || "Koi error aavyo.");
+        setError(e?.message || " error");
       } finally {
         setLoading(false);
       }
@@ -179,7 +179,7 @@ export default function MusicDetails({ token }) {
                 {track.preview_url ? (
                   <audio src={track.preview_url} controls className="w-100" />
                 ) : (
-                  <div className="text-muted">Aa track ma preview available nathi.</div>
+                  <div className="text-muted">this tarck not a show this song </div>
                 )}
               </div>
             </div>
